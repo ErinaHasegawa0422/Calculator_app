@@ -14,7 +14,7 @@
 ## インストール方法
 
 ```bash
-git clone 
+git clone https://github.com/ErinaHasegawa0422/Calculator_app.git
 cd your-app
 npm install
 npm start
