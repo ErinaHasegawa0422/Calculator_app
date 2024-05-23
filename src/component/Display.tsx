@@ -1,4 +1,4 @@
 
-export default function Display() {
-    return <div>0</div>
+export default function Display(props: {value: string;}) {
+    return <div>{props.value}</div>
 }
