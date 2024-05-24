@@ -1,7 +1,8 @@
 export default function ButtonPanel(props: {
     buttonHandler: (code: string)=>void;
 }) {
-    return <div>
+    return (
+    <div className="buttonPanel">
         <div>
             <button onClick={() => props.buttonHandler("7")}>7</button>
             <button onClick={() => props.buttonHandler("8")}>8</button>
@@ -27,4 +28,5 @@ export default function ButtonPanel(props: {
             <button onClick={() => props.buttonHandler("=")}>=</button>
         </div>
     </div>
+    )
 }
