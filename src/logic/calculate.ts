@@ -53,7 +53,7 @@ export interface State {
     operator: string | null;
     isNextClear: boolean;
 }
-function isNumberButton(button: string) {
+function isNumberButton(button: string): button is NumberCode {
     return (
         button === "0" ||
         button === "1" ||
@@ -67,7 +67,7 @@ function isNumberButton(button: string) {
         button === "9" 
     );
 }
-function handleNumberButton(button: string, state: State): State {
+function handleNumberButton(button: NumberCode, state: State): State {
     if (state.isNextClear) {
         return {
             current: button,
@@ -92,11 +92,11 @@ function handleNumberButton(button: string, state: State): State {
     }
 }
 
-function isOperatorButton(button: string) {
+function isOperatorButton(button: string): button is Operator {
     return button === "+" || button === "-";
 }
 
-function handleOperatorButton(button: string, state: State): State {
+function handleOperatorButton(button: Operator, state: State): State {
     if (state.operator === null) {
         return {
             current: state.current,
